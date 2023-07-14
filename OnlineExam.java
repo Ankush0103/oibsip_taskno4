@@ -58,7 +58,6 @@ class OnlineExam extends JFrame implements ActionListener {
                 {
                     jLabel2.setText("Time left: " + timeLeft[0] + " sec.");
                 } else {
-                    //timer.cancel();
                     jLabel2.setText("Time Out");
                     jButton1.setEnabled(false);
                     jButton2.setEnabled(true);
