@@ -38,7 +38,7 @@ class LoginForm extends JFrame implements ActionListener {
         String userValue = textField1.getText();
         String passValue = textField2.getText();
         new OnlineExam(userValue);
-        dispose(); // closes the login window
+        dispose(); // To close the login window after entering credentials
 
     }
 }
