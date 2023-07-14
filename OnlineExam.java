@@ -49,7 +49,7 @@ class OnlineExam extends JFrame implements ActionListener {
         setVisible(true);
         setSize(600, 350);
 
-        final int[] timeLeft = {60};
+        final int[] timeLeft = {10};
         TimerTask task = new TimerTask() {
             public void run() {
 

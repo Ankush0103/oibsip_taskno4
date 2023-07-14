@@ -10,7 +10,7 @@ class LoginForm extends JFrame implements ActionListener {
     private final JTextField textField1, textField2;
 
     LoginForm() {
-
+        // To login- Username = user1, password = pass
         userLabel = new JLabel("Enter Username: ");
         textField1 = new JTextField(15);
         passLabel = new JLabel("Enter Password: ");
@@ -35,10 +35,15 @@ class LoginForm extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        String userValue = textField1.getText();
+        String userValue = textField1.getText(); // To login- Username = user1, password = pass
         String passValue = textField2.getText();
-        new OnlineExam(userValue);
-        dispose(); // To close the login window after entering credentials
+        if (userValue.equals("user1")&&passValue.equals("pass")) {
+            new OnlineExam(userValue);
+            dispose(); // To close the login window after entering credentials
+        }
+        else
+            JOptionPane.showMessageDialog(null, "Enter valid credentials");
+
 
     }
 }
