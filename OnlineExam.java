@@ -88,19 +88,18 @@ class OnlineExam extends JFrame implements ActionListener {
             if (current == 9) {
                 jButton2.setEnabled(true);
             }
-
-        }
-
-        for (int i = 0, y = 1; i < x; i++, y++) {
-            if(e.getActionCommand().equals("Result"))
-            {
-                if(check())
-                    count += 1;
-                current++;
-                int c = count + 1;
-                JOptionPane.showMessageDialog(this,"Score = "+c,   "Marks", JOptionPane.INFORMATION_MESSAGE, ch);
-                System.exit(0);
+            if(check()) {
+                count += 1;
             }
+            int c;
+            current++;
+            if(count==9)
+                c = count + 1;
+            else
+                c=count;
+            JOptionPane.showMessageDialog(this,"Score = "+c,   "Marks", JOptionPane.INFORMATION_MESSAGE, ch);
+            System.exit(0);
+
         }
 
     }
